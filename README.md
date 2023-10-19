@@ -1,6 +1,3 @@
-Of course, James! Below is a detailed README.md for Voxey:
-
-
 # Voxey 🌍
 
 Voxey is a freedom-respecting voxel game built with the power and flexibility of the Godot engine. Dive in, craft your world, and unleash its infinite modding potential!
@@ -22,8 +19,8 @@ Voxey is a freedom-respecting voxel game built with the power and flexibility of
 ### Installation
 
 1. Clone the repository:
-   ```sh
-   git clone https://github.com/Hacknique/Voxey
+```sh
+git clone https://github.com/Hacknique/Voxey
 ```
 
 2. Open the project in Godot.
