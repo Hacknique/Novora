@@ -1,6 +1,11 @@
-[gd_scene format=3 uid="uid://vnvvk2h417qr"]
+[gd_scene load_steps=5 format=3 uid="uid://vnvvk2h417qr"]
 
-[node name="main_Menu" type="Control"]
+[ext_resource type="Script" path="res://scripts/Menus/MainMenu/WorldList.gd" id="1_une14"]
+[ext_resource type="Script" path="res://scripts/Menus/MainMenu/DeleteWorld.gd" id="2_wog4i"]
+[ext_resource type="Script" path="res://scripts/Menus/MainMenu/NewWorld.gd" id="3_er4bh"]
+[ext_resource type="Script" path="res://scripts/Menus/MainMenu/PlayWorld.gd" id="4_brs58"]
+
+[node name="main_menu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -29,7 +34,7 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -571.0
 offset_top = -260.0
-offset_right = 573.0
+offset_right = 569.0
 offset_bottom = 322.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -78,10 +83,12 @@ layout_mode = 2
 color = Color(0, 0, 0, 1)
 
 [node name="WorldList" type="ItemList" parent="TabContainer/Start Game/Game Menu/WorldListAndOptions/WorldMenu/WorldListContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 auto_height = true
 item_count = 1
 item_0/text = "Example World"
+script = ExtResource("1_une14")
 
 [node name="WorldOptions" type="GridContainer" parent="TabContainer/Start Game/Game Menu/WorldListAndOptions"]
 layout_mode = 2
@@ -95,20 +102,39 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 50
 
-[node name="DeleteWorld" type="Button" parent="TabContainer/Start Game/Game Menu/WorldListAndOptions/WorldOptions/HBoxContainer"]
+[node name="DeleteWorldBtn" type="Button" parent="TabContainer/Start Game/Game Menu/WorldListAndOptions/WorldOptions/HBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
+disabled = true
 text = "Delete"
+script = ExtResource("2_wog4i")
 
-[node name="NewWorld" type="Button" parent="TabContainer/Start Game/Game Menu/WorldListAndOptions/WorldOptions/HBoxContainer"]
+[node name="NewWorldBtn" type="Button" parent="TabContainer/Start Game/Game Menu/WorldListAndOptions/WorldOptions/HBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 text = "New"
+script = ExtResource("3_er4bh")
 
-[node name="PlayWorld" type="Button" parent="TabContainer/Start Game/Game Menu/WorldListAndOptions/WorldOptions"]
+[node name="PlayWorldBtn" type="Button" parent="TabContainer/Start Game/Game Menu/WorldListAndOptions/WorldOptions"]
+unique_name_in_owner = true
 layout_mode = 2
+disabled = true
 text = "Play Game"
+script = ExtResource("4_brs58")
 
 [node name="Settings" type="TabBar" parent="TabContainer"]
 visible = false
 layout_mode = 2
+
+[node name="DeleteWorldDialog" type="ConfirmationDialog" parent="."]
+unique_name_in_owner = true
+size = Vector2i(351, 100)
+dialog_text = "Are you sure you want to delete this world?"
+
+[connection signal="empty_clicked" from="TabContainer/Start Game/Game Menu/WorldListAndOptions/WorldMenu/WorldListContainer/WorldList" to="TabContainer/Start Game/Game Menu/WorldListAndOptions/WorldMenu/WorldListContainer/WorldList" method="_on_empty_clicked"]
+[connection signal="item_selected" from="TabContainer/Start Game/Game Menu/WorldListAndOptions/WorldMenu/WorldListContainer/WorldList" to="TabContainer/Start Game/Game Menu/WorldListAndOptions/WorldMenu/WorldListContainer/WorldList" method="_on_item_selected"]
+[connection signal="pressed" from="TabContainer/Start Game/Game Menu/WorldListAndOptions/WorldOptions/HBoxContainer/DeleteWorldBtn" to="TabContainer/Start Game/Game Menu/WorldListAndOptions/WorldOptions/HBoxContainer/DeleteWorldBtn" method="_on_pressed"]
+[connection signal="pressed" from="TabContainer/Start Game/Game Menu/WorldListAndOptions/WorldOptions/HBoxContainer/NewWorldBtn" to="TabContainer/Start Game/Game Menu/WorldListAndOptions/WorldOptions/HBoxContainer/NewWorldBtn" method="_on_pressed"]
+[connection signal="confirmed" from="DeleteWorldDialog" to="TabContainer/Start Game/Game Menu/WorldListAndOptions/WorldOptions/HBoxContainer/DeleteWorldBtn" method="_on_delete_world_dialog_confirmed"]
