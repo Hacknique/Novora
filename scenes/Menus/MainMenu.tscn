@@ -86,8 +86,6 @@ color = Color(0, 0, 0, 1)
 unique_name_in_owner = true
 layout_mode = 2
 auto_height = true
-item_count = 1
-item_0/text = "Example World"
 script = ExtResource("1_une14")
 
 [node name="WorldOptions" type="GridContainer" parent="TabContainer/Start Game/Game Menu/WorldListAndOptions"]
