@@ -5,7 +5,7 @@
 [ext_resource type="Script" path="res://scripts/Menus/MainMenu/NewWorld.gd" id="3_er4bh"]
 [ext_resource type="Script" path="res://scripts/Menus/MainMenu/PlayWorld.gd" id="4_brs58"]
 
-[node name="main_menu" type="Control"]
+[node name="MainMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -133,6 +133,7 @@ unique_name_in_owner = true
 size = Vector2i(351, 100)
 dialog_text = "Are you sure you want to delete this world?"
 
+[connection signal="ready" from="." to="." method="_on_ready"]
 [connection signal="empty_clicked" from="TabContainer/Start Game/Game Menu/WorldListAndOptions/WorldMenu/WorldListContainer/WorldList" to="TabContainer/Start Game/Game Menu/WorldListAndOptions/WorldMenu/WorldListContainer/WorldList" method="_on_empty_clicked"]
 [connection signal="item_selected" from="TabContainer/Start Game/Game Menu/WorldListAndOptions/WorldMenu/WorldListContainer/WorldList" to="TabContainer/Start Game/Game Menu/WorldListAndOptions/WorldMenu/WorldListContainer/WorldList" method="_on_item_selected"]
 [connection signal="pressed" from="TabContainer/Start Game/Game Menu/WorldListAndOptions/WorldOptions/HBoxContainer/DeleteWorldBtn" to="TabContainer/Start Game/Game Menu/WorldListAndOptions/WorldOptions/HBoxContainer/DeleteWorldBtn" method="_on_pressed"]

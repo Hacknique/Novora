@@ -1,19 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://dvlxvbiq6k0xd"]
 
+[ext_resource type="Script" path="res://scripts/Menus/NewWorldMenu/Root.gd" id="1_4t6s5"]
 [ext_resource type="Script" path="res://scripts/Menus/NewWorldMenu/Cancel.gd" id="1_k3lwg"]
 [ext_resource type="Script" path="res://scripts/Menus/NewWorldMenu/Create.gd" id="1_xgcw4"]
 [ext_resource type="Script" path="res://scripts/Menus/NewWorldMenu/NameEntry.gd" id="2_vqtrq"]
-
-[sub_resource type="GDScript" id="GDScript_wjv4e"]
-script/source = "extends Control
-
-signal _on_can_create_world_changed(new_can_create_world: bool)
-
-var can_create_world = false
-
-func _on__on_can_create_world_changed(new_can_create_world):
-	%CreateNewWorldBtn.disabled = not new_can_create_world
-"
 
 [node name="NewWorld" type="Control"]
 layout_mode = 3
@@ -22,7 +12,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = SubResource("GDScript_wjv4e")
+script = ExtResource("1_4t6s5")
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 layout_mode = 1
@@ -104,7 +94,6 @@ size_flags_horizontal = 3
 text = "Cancel"
 script = ExtResource("1_k3lwg")
 
-[connection signal="_on_can_create_world_changed" from="." to="." method="_on__on_can_create_world_changed"]
 [connection signal="text_changed" from="PanelContainer/NewWorldGrid/MainOptions/WorldNameContainer/WorldNameEntry" to="PanelContainer/NewWorldGrid/MainOptions/WorldNameContainer/WorldNameEntry" method="_on_text_changed"]
 [connection signal="pressed" from="PanelContainer/NewWorldGrid/Actions/CreateNewWorldBtn" to="PanelContainer/NewWorldGrid/Actions/CreateNewWorldBtn" method="_on_pressed"]
 [connection signal="pressed" from="PanelContainer/NewWorldGrid/Actions/CancelNewWorldBtn" to="PanelContainer/NewWorldGrid/Actions/CancelNewWorldBtn" method="_on_pressed"]

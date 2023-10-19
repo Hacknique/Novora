@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dil7reps2d4av"]
+
+[ext_resource type="Script" path="res://scripts/World.gd" id="1_lapfb"]
+
+[node name="World" type="Node3D"]
+script = ExtResource("1_lapfb")
+metadata/world_name = ""
+
+[connection signal="ready" from="." to="." method="_on_ready"]
