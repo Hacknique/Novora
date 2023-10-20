@@ -12,12 +12,6 @@ func _ready():
 		name = name.trim_suffix(".tres")
 		self.add_item(name)
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
-
 func _on_item_selected(index):
 	%DeleteWorldBtn.disabled = false
 	%PlayWorldBtn.disabled = false

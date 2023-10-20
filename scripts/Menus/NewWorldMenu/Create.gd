@@ -3,7 +3,7 @@ extends Node
 func _on_pressed():
 	var world_name = %WorldNameEntry.get("text")
 	
-	var world_scene = preload("res://scenes/World.tscn")
+	var world_scene = preload("res://scenes/World/World.tscn")
 
 	# Instance the scene
 	var world_instance = world_scene.instantiate()
