@@ -1,0 +1,26 @@
+[gd_scene load_steps=7 format=3 uid="uid://b58l1mpljrl5"]
+
+[ext_resource type="Script" path="res://scripts/Objects/Voxel.gd" id="1_wxd7m"]
+[ext_resource type="Texture2D" uid="uid://ca8w1823nqvp6" path="res://assets/Voxel/no_texture.png" id="3_30w21"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nek42"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_tfkpw"]
+material = SubResource("StandardMaterial3D_nek42")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7l1l5"]
+albedo_texture = ExtResource("3_30w21")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_m7h2o"]
+
+[node name="Voxel" type="RigidBody3D"]
+freeze = true
+script = ExtResource("1_wxd7m")
+
+[node name="Texture" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_tfkpw")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_7l1l5")
+
+[node name="CollisionBox" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_m7h2o")
