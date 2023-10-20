@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cfwjbkk6aw3cg"]
+
+[ext_resource type="Texture2D" uid="uid://b6l3q8a0vxwgm" path="res://models/Voxel/VoxeyCube_no_texture.png" id="1_p5u2e"]
+
+[resource]
+resource_name = "Front"
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_p5u2e")
+roughness = 0.5

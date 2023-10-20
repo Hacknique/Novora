@@ -1,12 +1,17 @@
 extends RigidBody3D
 
+func set_texture(front: String, back: String, top: String, bottom: String, left: String, right: String):
+	var sides = [front, back, top, bottom, left, right]
+	for i in range(6):
+		var tex = load(sides[i])
+		var mat = StandardMaterial3D.new()
+		mat.albedo_texture = tex
+		self.get_node("Texture").set_surface_override_material(i, mat)
 
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+	set_texture("res://assets/Voxel/no_texture.png",
+				"res://assets/Voxel/no_texture.png",
+				"res://assets/Voxel/no_texture.png",
+				"res://assets/Voxel/no_texture.png",
+				"res://assets/Voxel/no_texture.png",
+				"res://assets/Voxel/no_texture.png")
