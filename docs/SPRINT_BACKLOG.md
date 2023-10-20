@@ -1,7 +1,7 @@
 | Title  | Date       | Goals/Functionality                                                        |
 | ------ | ---------- | -------------------------------------------------------------------------- |
-| Week 1 | 09/10/2023 | Start on Sprint Backlog, User Stories and design document. Planning Stage. |
-| Week 2 | 16/10/2023 | Begin on first user stories for basic UI. Initial Prototype Stage          |
-| Week 3 | 23/10/2023 | Work on defining Node types and make node pallet.                          |
-| Week 4 | 30/10/2023 | Bug fixes and Other improvements                                           |
-| Week 5 | 06/11/2023 | Refine existing mechanics                                                  |
+| Week 1 | 19/10/2023 | Start on Sprint Backlog, User Stories and design document. Do user stories for 0.1.0. |
+| Week 2 | 26/10/2023 | Work on Modding API and registering nodes in the game, Player UI, Placing and Breaking Nodes, User stories for 0.2.0          |
+| Week 3 | 02/11/2023 | User stories for 0.3.0                          |
+| Week 4 | 09/11/2023 | User stories for 0.4.0                                           |
+| Week 5 | 16/11/2023 | User stories for 0.5.0                                                  |
