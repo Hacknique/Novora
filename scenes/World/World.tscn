@@ -1,9 +1,50 @@
-[gd_scene load_steps=2 format=3 uid="uid://dil7reps2d4av"]
+[gd_scene load_steps=8 format=3 uid="uid://dil7reps2d4av"]
 
 [ext_resource type="Script" path="res://scripts/World/World.gd" id="1_qxp45"]
+[ext_resource type="Script" path="res://scripts/World/Player.gd" id="2_muo25"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_pak5f"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ww7c8"]
+size = Vector3(1, 2, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_7scnl"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yquho"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_44ms4"]
+size = Vector3(100, 1, 100)
 
 [node name="World" type="Node3D"]
 script = ExtResource("1_qxp45")
 metadata/world_name = ""
+
+[node name="Player" type="CharacterBody3D" parent="."]
+script = ExtResource("2_muo25")
+
+[node name="Texture" type="MeshInstance3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 2, 0, 0, 0, 1, 0, 1.00932, 0)
+mesh = SubResource("BoxMesh_pak5f")
+skeleton = NodePath("")
+
+[node name="CollisionBox" type="CollisionShape3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00932, 0)
+shape = SubResource("BoxShape3D_ww7c8")
+
+[node name="Camera" type="Camera3D" parent="Player"]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.58064, 0)
+current = true
+
+[node name="Floor" type="StaticBody3D" parent="."]
+
+[node name="Texture" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(100, 0, 0, 0, 1, 0, 0, 0, 100, 0, 0, 0)
+mesh = SubResource("PlaneMesh_7scnl")
+surface_material_override/0 = SubResource("StandardMaterial3D_yquho")
+
+[node name="CollisionBox" type="CollisionShape3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+shape = SubResource("BoxShape3D_44ms4")
 
 [connection signal="ready" from="." to="." method="_on_ready"]

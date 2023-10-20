@@ -1,9 +1,12 @@
 [gd_scene load_steps=5 format=3 uid="uid://dvlxvbiq6k0xd"]
 
-[ext_resource type="Script" path="res://scripts/Menus/NewWorldMenu/Root.gd" id="1_4t6s5"]
 [ext_resource type="Script" path="res://scripts/Menus/NewWorldMenu/Cancel.gd" id="1_k3lwg"]
 [ext_resource type="Script" path="res://scripts/Menus/NewWorldMenu/Create.gd" id="1_xgcw4"]
 [ext_resource type="Script" path="res://scripts/Menus/NewWorldMenu/NameEntry.gd" id="2_vqtrq"]
+
+[sub_resource type="GDScript" id="GDScript_8yvxp"]
+script/source = "extends Node
+"
 
 [node name="NewWorld" type="Control"]
 layout_mode = 3
@@ -12,7 +15,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_4t6s5")
+script = SubResource("GDScript_8yvxp")
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 layout_mode = 1

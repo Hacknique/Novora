@@ -1,4 +1,25 @@
-[gd_scene format=3 uid="uid://3s6nv4bmerim"]
+[gd_scene load_steps=7 format=3 uid="uid://3s6nv4bmerim"]
+
+[ext_resource type="Texture2D" uid="uid://bkliyey176e0w" path="res://icon.svg" id="1_5boy3"]
+[ext_resource type="Script" path="res://scripts/World/UserInterface/EscapeMenu/AboutLabel.gd" id="2_vhb67"]
+[ext_resource type="Script" path="res://scripts/World/UserInterface/EscapeMenu/Options/ExitToOSBtn.gd" id="4_fya7k"]
+[ext_resource type="Script" path="res://scripts/World/UserInterface/EscapeMenu/Options/ExitToMenuBtn.gd" id="4_smt7r"]
+
+[sub_resource type="GDScript" id="GDScript_4xgrh"]
+script/source = "extends TextureRect
+
+func _ready():
+	var texture = preload(\"res://icon.svg\")  # Assuming your SVG has been imported as a texture
+	self.texture = texture
+"
+
+[sub_resource type="GDScript" id="GDScript_nn5sa"]
+script/source = "extends Button
+
+
+func _on_pressed():
+	self.get_parent().get_parent().get_parent().get_parent().queue_free()
+"
 
 [node name="EscapeMenu" type="Control"]
 layout_mode = 3
@@ -28,6 +49,58 @@ color = Color(0.244776, 0.244776, 0.244776, 1)
 
 [node name="EscapeMenuGrid" type="GridContainer" parent="EscapeMenuAndBackground"]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/h_separation = 20
+theme_override_constants/v_separation = 20
+columns = 3
 
 [node name="About" type="VBoxContainer" parent="EscapeMenuAndBackground/EscapeMenuGrid"]
 layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="TextureRect" type="TextureRect" parent="EscapeMenuAndBackground/EscapeMenuGrid/About"]
+layout_mode = 2
+texture = ExtResource("1_5boy3")
+script = SubResource("GDScript_4xgrh")
+
+[node name="EscapeMenuAboutLabel" type="Label" parent="EscapeMenuAndBackground/EscapeMenuGrid/About"]
+layout_mode = 2
+text = "Game Name and Version"
+script = ExtResource("2_vhb67")
+
+[node name="Options" type="VBoxContainer" parent="EscapeMenuAndBackground/EscapeMenuGrid"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Continue" type="Button" parent="EscapeMenuAndBackground/EscapeMenuGrid/Options"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "Continue"
+script = SubResource("GDScript_nn5sa")
+
+[node name="ExitToMenu" type="Button" parent="EscapeMenuAndBackground/EscapeMenuGrid/Options"]
+layout_mode = 2
+text = "Exit To Menu"
+script = ExtResource("4_smt7r")
+
+[node name="ExitToOS" type="Button" parent="EscapeMenuAndBackground/EscapeMenuGrid/Options"]
+layout_mode = 2
+text = "Exit to OS"
+script = ExtResource("4_fya7k")
+
+[node name="Label" type="Label" parent="EscapeMenuAndBackground/EscapeMenuGrid"]
+layout_mode = 2
+text = "Controls:
+- W: Moves you forward
+- A: Moves you left
+- S: Moves you backwards
+- D: Moves you right
+- Left Click: Mine Block
+- Right Click: Place Block
+- Mouse: Turn/Look 
+"
+
+[connection signal="pressed" from="EscapeMenuAndBackground/EscapeMenuGrid/Options/Continue" to="EscapeMenuAndBackground/EscapeMenuGrid/Options/Continue" method="_on_pressed"]
+[connection signal="pressed" from="EscapeMenuAndBackground/EscapeMenuGrid/Options/ExitToMenu" to="EscapeMenuAndBackground/EscapeMenuGrid/Options/ExitToMenu" method="_on_pressed"]
+[connection signal="pressed" from="EscapeMenuAndBackground/EscapeMenuGrid/Options/ExitToOS" to="EscapeMenuAndBackground/EscapeMenuGrid/Options/ExitToOS" method="_on_pressed"]
