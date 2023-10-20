@@ -173,13 +173,6 @@ should be described. The conclusion chapter:
 
 **References**
 
-Andrew Nitrogenesis <112193680+nitrogenez@users.noreply.github.com>:
-
-Textures Contributed:
-
-- computer_front.png
-- computer_side.png
-
 All incorporated text, diagrams, graphics, pictures, illustrations, figures,
 proofs, tables and any other intellectual property (for example, designs,
 computer software, etc.) including that in software, demonstrations,
@@ -253,156 +246,27 @@ If there are no changes to your PID then Appendix C will simply contain the text
 
 - **Appendix D: Current Environment Investigation Report**
 
-If you are using an Agile development method then Appendix D of your submission
-will simply contain the text \"Not Applicable, see Appendices L, M and possibly
-N for Agile development method timeboxes.\"
-
-Appendix D of your submission must contain nothing other than your Current
-Environment Investigation Report.
-
-For example, a typical 'conventional' waterfall software development lifecycle
-using 'conventional' modelling techniques the Current Environment Investigation
-Report will include DFD/s (physical and logical), EPDs, an ERD, entity
-descriptions and details of the problems of the current system.
-
-For example, a typical 'conventional' waterfall software development lifecycle
-using UML object modelling techniques the Current Environment Investigation
-Report would typic- ally include high-level Use Cases supporting use case
-diagrams and details of the problems of the current system.
-
-If you believe that a Current Environment Investigation Report is not
-appropriate for your Individual Project 40 (i.e. there is no current system)
-then you must agree this with your supervisor.
-
-If a Current Environment Investigation Report is not appropriate for your
-Individual Project 40 (i.e., there is no current system) then Appendix D will
-simply contain the text \"Not Applicable\".
-
-Appendix D is for the Current Environment Investigation Report deliverable only.
-No marks will be awarded for the Current Environment Investigation Report
-deliverablbeother than for material contained in Appendix D. Discussion of the
-Current Environment Investigation Report deliverable should be contained in the
-main chapters not here.
+Not Applicable
 
 - **Appendix E: Requirements Specification**
 
-If you are using an Agile development method then Appendix E of your submission
-will simply contain the text \"Not Applicable, see Appendices L, M and possibly
-N for Agile development method timeboxes.\"
-
-Appendix E of your submission must contain nothing other than your Requirements
-Specification.
-
-For example, a typical 'conventional' waterfall software development lifecycle
-using 'conventional' modelling techniques the Requirement Specification will
-include details of the functional requirements (i.e. DFD/s, EPDs, an ERD, entity
-descriptions) and the non- functional requirements (i.e., constraints and
-goals).
-
-For example, a typical 'conventional' waterfall software development life cycle
-using UML object modelling techniques the Requirement Specification could
-include a functional requirement document, Use Cases (with a supporting use case
-diagrams), Conceptual Model (possibly supported by noun analysis), System
-Sequence Diagrams and Operation Contracts along with the non-functional
-requirements (i.e., constraints and goals).
-
-Appendix E is for the Requirements Specification deliverable only. No marks will
-be awarded for the Requirements Specification deliverable other than for
-material contained in Appendix E. Discussion of the Requirements Specification
-deliverable should be contained in the main chapters not here.
+Not Applicable
 
 - **Appendix F: Design Report**
 
-If you are using an Agile development method then Appendix F of your submission
-will simply contain the text \"Not Applicable, see Appendices L, M and possibly
-N for Agile development method timeboxes.\"
-
-Appendix F of your submission must contain nothing other than your Design
-Report.
-
-For example, a typical 'conventional' waterfall software development lifecycle
-using 'conventional' modelling techniques the Design Report will include a
-structure chart/menu map, module specifications and details of the file/database
-design.
-
-For example, a typical 'conventional' waterfall software development lifecycle
-using UML object modelling techniques the Design Report will include interaction
-diagrams (sequence and/or collaboration diagrams) and class diagrams. You are
-encouraged to refer to GRASP patterns when developing the interaction diagrams.
-
-Appendix F is for the Design Report deliverable only. No marks will be awarded
-for the Design Report deliverable other than for material contained in Appendix
-F. Discussion of the Design Report deliverable should be contained in the main
-chapters not here.
+Not Applicable
 
 - **Appendix G: Implementation**
 
-If you are using an Agile development method then Appendix G of your submission
-will simply contain the text \"Not Applicable, see Appendices L, M and possibly
-N for Agile development method timeboxes.\"
-
-Appendix G of your submission must contain nothing other than details about your
-Implementation
-
-For example, a typical 'conventional' waterfall software development lifecycle
-using 'conventional' modelling techniques the Implementation will include
-program designs (if appropriate) and program listings.
-
-For example, a typical 'conventional' waterfall software development lifecycle
-using UML object modelling techniques the Implementation will include algorithm
-designs for methods (using Structured English) and program listings for each of
-the classes.
-
-Any generated code (e.g. a Microsoft Access .accdb file) should be listed in
-this appendix. All code that you have written yourself should be listed in this
-appendix.
-
-Any generated code that you have amended yourself should be listed in this
-appendix.
-
-If you have not written any code or amended any generated code, then a statement
-to this effect must be included in this appendix.
-
-Appendix G is for the Implementation deliverable/s only. No marks will be
-awarded for the Implementation deliverable/s other than for material contained
-in Appendix G. Discussion of the Implementation deliverable/s should be
-contained in the main chapters not here.
+Not Applicable
 
 # **Appendix H: Testing**
 
-If you are using an Agile development method then Appendix H of your submission
-will simply contain the text \"Not Applicable, see Appendices L, M and possibly
-N for Agile development method timeboxes.\" Appendix H of your submission must
-contain nothing other than details of your testing. This must include:
-
-**--** a clear test strategy.
-
-**--** a test plan including expected results. The test plan should be well
-structured in order to make it easy for the reader to quickly establish its
-completeness and comprehensiveness.
-
-**--** a management summary giving an overview of tests that were not planned,
-tests that were not completed, tests that failed, outstanding problems, etc.
-
-In addition, note that for OO testing, integration (final) testing is important
-but of equal importance is ensuring that a 'testing class' and the associated
-test plan is used to test each class individually.
-
-Appendix H is for the Testing deliverable/s only. No marks will be awarded for
-the Testing deliverable/s other than for material contained in Appendix H.
-Discussion of the Testing deliverable/s should be contained in the main chapters
-not here.
+Not Applicable
 
 # **Appendix I: User Guide**
 
-If you are using an Agile development method then Appendix I of your submission
-will simply contain the text \"Not Applicable, see Appendices L, M and possibly
-N for Agile development method timeboxes.\"
-
-Appendix I of your submission must contain nothing other than a User Guide. No
-marks will be awarded for the User Guide deliverable other than for material
-contained in Appendix I. Discussion of the User Guide deliverable should be
-contained in the main chapters not here.
+Not Applicable
 
 # **Appendix J: Project Management**
 
