@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://vnvvk2h417qr"]
+[gd_scene load_steps=6 format=3 uid="uid://vnvvk2h417qr"]
 
+[ext_resource type="Script" path="res://scripts/Menus/MainMenu/TitleLabel.gd" id="1_aynnw"]
 [ext_resource type="Script" path="res://scripts/Menus/MainMenu/WorldList.gd" id="1_une14"]
 [ext_resource type="Script" path="res://scripts/Menus/MainMenu/DeleteWorld.gd" id="2_wog4i"]
 [ext_resource type="Script" path="res://scripts/Menus/MainMenu/NewWorld.gd" id="3_er4bh"]
@@ -23,7 +24,7 @@ offset_right = 20.0
 offset_bottom = 23.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 50
-text = "Voxey"
+script = ExtResource("1_aynnw")
 
 [node name="TabContainer" type="TabContainer" parent="."]
 layout_mode = 1
