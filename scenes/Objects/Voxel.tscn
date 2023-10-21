@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://b58l1mpljrl5"]
+[gd_scene load_steps=14 format=3 uid="uid://b58l1mpljrl5"]
 
 [ext_resource type="Script" path="res://scripts/Objects/Voxel.gd" id="1_wxd7m"]
 [ext_resource type="Texture2D" uid="uid://ca8w1823nqvp6" path="res://assets/Voxel/no_texture.png" id="2_74s7g"]
@@ -183,25 +183,8 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_8nafx")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qoefw"]
-albedo_texture = ExtResource("2_74s7g")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ynkib"]
-albedo_texture = ExtResource("2_74s7g")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fu81j"]
-albedo_texture = ExtResource("2_74s7g")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yy4ps"]
-albedo_texture = ExtResource("2_74s7g")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0w55s"]
-albedo_texture = ExtResource("2_74s7g")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pnhsc"]
-albedo_texture = ExtResource("2_74s7g")
-
 [node name="Voxel" type="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 freeze = true
 script = ExtResource("1_wxd7m")
 
@@ -212,11 +195,5 @@ shape = SubResource("BoxShape3D_m7h2o")
 material_override = SubResource("ShaderMaterial_5wano")
 mesh = SubResource("ArrayMesh_pevmu")
 skeleton = NodePath("")
-surface_material_override/0 = SubResource("StandardMaterial3D_qoefw")
-surface_material_override/1 = SubResource("StandardMaterial3D_ynkib")
-surface_material_override/2 = SubResource("StandardMaterial3D_fu81j")
-surface_material_override/3 = SubResource("StandardMaterial3D_yy4ps")
-surface_material_override/4 = SubResource("StandardMaterial3D_0w55s")
-surface_material_override/5 = SubResource("StandardMaterial3D_pnhsc")
 
 [connection signal="ready" from="." to="." method="_on_ready"]

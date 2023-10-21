@@ -45,7 +45,7 @@ func _process(delta):
 
 func _input(event):
 	if event is InputEventMouseMotion and !escape_menu_instance:
-		yaw += mouse_sensitivity * event.relative.x
+		yaw -= mouse_sensitivity * event.relative.x
 		pitch -= mouse_sensitivity * event.relative.y
 		pitch = clamp(pitch, -70, 70)
 		
