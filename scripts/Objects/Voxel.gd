@@ -1,20 +1,12 @@
-extends RigidBody3D
+extends StaticBody3D
+class_name Voxel
 
-func set_texture(front: String, back: String, top: String, bottom: String, left: String, right: String):
-	var sides = [front, back, top, bottom, left, right]
-	var shader_param_names = ["texture_front", "texture_back", "texture_top", "texture_bottom", "texture_left", "texture_right"]
+func set_texture(atlas_texture: String):
+	var material = self.get_node("Texture").get_active_material(0)  # Assuming the material is on surface 0
 	
-	var material = self.get_node("Texture").material_override  # Assuming the material is on surface 0
-	
-	for i in range(6):
-		var tex = load(sides[i])
-		material.set_shader_parameter(shader_param_names[i], tex)
+	var tex = load(atlas_texture)
+	material.set_texture(0, tex)
 
 
 func _ready():
-	set_texture("res://assets/Voxel/test_texture.png",
-				"res://assets/Voxel/test_texture.png",
-				"res://assets/Voxel/test_texture.png",
-				"res://assets/Voxel/test_texture.png",
-				"res://assets/Voxel/test_texture.png",
-				"res://assets/Voxel/test_texture.png")
+	set_texture("res://assets/Voxel/voxel_texture_atlas.svg")
