@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bv0m3fi8o1e8b"
-path="res://.godot/imported/VoxeyCube.gltf-8ceac9595b58bc394ca5c8aa84359414.scn"
+uid="uid://dxh18pk4kdydj"
+path="res://.godot/imported/VoxeyCube.gltf-028fe61982bf179b96d65845962684a5.scn"
 
 [deps]
 
-source_file="res://models/Voxel/VoxeyCube.gltf"
-dest_files=["res://.godot/imported/VoxeyCube.gltf-8ceac9595b58bc394ca5c8aa84359414.scn"]
+source_file="res://models/VoxeyCube.gltf"
+dest_files=["res://.godot/imported/VoxeyCube.gltf-028fe61982bf179b96d65845962684a5.scn"]
 
 [params]
 
@@ -32,27 +32,27 @@ _subresources={
 "materials": {
 "Back": {
 "use_external/enabled": true,
-"use_external/path": "res://models/Voxel/Back.tres"
+"use_external/path": "res://models/Back.tres"
 },
 "Bottom": {
 "use_external/enabled": true,
-"use_external/path": "res://models/Voxel/Bottom.tres"
+"use_external/path": "res://models/Bottom.tres"
 },
 "Front": {
 "use_external/enabled": true,
-"use_external/path": "res://models/Voxel/Front.tres"
+"use_external/path": "res://models/Front.tres"
 },
 "Left": {
 "use_external/enabled": true,
-"use_external/path": "res://models/Voxel/Left.tres"
+"use_external/path": "res://models/Left.tres"
 },
 "Right": {
 "use_external/enabled": true,
-"use_external/path": "res://models/Voxel/Right.tres"
+"use_external/path": "res://models/Right.tres"
 },
 "Top": {
 "use_external/enabled": true,
-"use_external/path": "res://models/Voxel/Top.tres"
+"use_external/path": "res://models/Top.tres"
 }
 }
 }

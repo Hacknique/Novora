@@ -2,22 +2,21 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6l3q8a0vxwgm"
-path.s3tc="res://.godot/imported/VoxeyCube_no_texture.png-1e2ce5bd00bda9808ffa4efb82c83731.s3tc.ctex"
+uid="uid://b0mku1jlemlec"
+path="res://.godot/imported/VoxeyCube_no_texture.png-868b4f98521aa225debabac25d8e43bf.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 generator_parameters={}
 
 [deps]
 
-source_file="res://models/Voxel/VoxeyCube_no_texture.png"
-dest_files=["res://.godot/imported/VoxeyCube_no_texture.png-1e2ce5bd00bda9808ffa4efb82c83731.s3tc.ctex"]
+source_file="res://models/VoxeyCube_no_texture.png"
+dest_files=["res://.godot/imported/VoxeyCube_no_texture.png-868b4f98521aa225debabac25d8e43bf.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
@@ -33,4 +32,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1
