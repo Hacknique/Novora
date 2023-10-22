@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dil7reps2d4av"]
+[gd_scene load_steps=9 format=3 uid="uid://dil7reps2d4av"]
 
 [ext_resource type="Script" path="res://scripts/World/World.gd" id="1_qxp45"]
 [ext_resource type="Script" path="res://scripts/World/Player.gd" id="2_muo25"]
@@ -14,6 +14,10 @@ size = Vector3(1, 2, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_44ms4"]
 size = Vector3(100, 1, 100)
+
+[sub_resource type="Environment" id="Environment_6kixt"]
+ambient_light_color = Color(0.996078, 0.996078, 0.996078, 1)
+ambient_light_energy = 16.0
 
 [node name="World" type="Node3D"]
 script = ExtResource("1_qxp45")
@@ -49,5 +53,8 @@ shape = SubResource("BoxShape3D_44ms4")
 
 [node name="Sun" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 100, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_6kixt")
 
 [connection signal="ready" from="." to="." method="_on_ready"]
