@@ -6,7 +6,7 @@ func set_texture(atlas_texture: String):
 	var material = self.get_node("Texture").get_active_material(0) 
 	
 	var tex = load(atlas_texture)
-	material.set_texture(0, tex)
+	material.set_shader_parameter("atlas_texture", tex)
 
 
 func _ready():
