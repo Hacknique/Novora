@@ -9,6 +9,11 @@ var yaw = 0.0
 var escape_menu_scene = preload("res://scenes/World/UserInterface/EscapeMenu.tscn")
 var escape_menu_instance = null
 
+# Jump and gravity variables
+var gravity = -9.8
+var jump_speed = 5.0
+var is_jumping = false
+
 func toggle_escape_menu():
 	if !escape_menu_instance:
 		# Instance and add the escape menu to the scene
@@ -20,7 +25,6 @@ func toggle_escape_menu():
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 		escape_menu_instance.queue_free()
 		escape_menu_instance = null
-
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -52,3 +56,20 @@ func _input(event):
 		var rotation = Vector3(0, yaw, 0)
 		self.rotation_degrees = rotation
 		self.get_node("Camera").rotation_degrees.x = pitch
+
+func _physics_process(delta):
+	# Apply gravity
+	if !is_on_floor():
+		velocity.y += gravity * delta
+	else:
+		velocity.y = 0
+		is_jumping = false
+
+	# Handle jump input
+	if Input.is_action_just_pressed("ui_jump") and !is_jumping:
+		velocity.y = jump_speed
+		is_jumping = true
+	
+	# Update the position using move_and_slide
+	move_and_slide()
+
