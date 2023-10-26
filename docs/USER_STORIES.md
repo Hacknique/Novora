@@ -13,6 +13,8 @@
 | Tasks               | - [ ] Design Main Menu UI                                                                      |
 |                     | - [ ] Implement world management functions.                                                    |
 
+---
+
 | ID--GAME-2          | As a Player, I want a Create World Menu to specify world details like Name, Seed, and Type.    |
 | ------------------- | ---------------------------------------------------------------------------------------------- |
 | Description         | - **User:** Player                                                                             |
@@ -25,6 +27,8 @@
 | Tasks               | - [ ] Design World Creation UI                                                                 |
 |                     | - [ ] Implement input validation and UI functionality.                                         |
 
+---
+
 | ID--GAME-3          | As a Player, I want the ability to save and load worlds for persistent gameplay.               |
 | ------------------- | ---------------------------------------------------------------------------------------------- |
 | Description         | - **User:** Player                                                                             |
@@ -36,6 +40,8 @@
 | Tasks               | - [ ] Develop a saving mechanism                                                               |
 |                     | - [ ] Implement a loading mechanism.                                                           |
 
+---
+
 | ID--GAME-4          | As a Player, I want an interactive flat world generated consisting of nodes.                   |
 | ------------------- | ---------------------------------------------------------------------------------------------- |
 | Description         | - **User:** Player                                                                             |
@@ -45,6 +51,8 @@
 | Notes               |                                                                                                |
 | Tasks               | - [ ] Develop the world generation algorithm                                                   |
 |                     | - [ ] Test flat world generation.                                                              |
+
+---
 
 | ID--GAME-5          | As a Player, I want basic controls for movement and orientation in the game world.             |
 | ------------------- | ---------------------------------------------------------------------------------------------- |
@@ -57,6 +65,8 @@
 | Tasks               | - [ ] Code player movement controls                                                            |
 |                     | - [ ] Implement mouse controls for player orientation.                                         |
 
+---
+
 | ID--GAME-6          | As a Player, I want a Pause Menu to access in-game options when pressing the Escape key.       |
 | ------------------- | ---------------------------------------------------------------------------------------------- |
 | Description         | - **User:** Player                                                                             |
@@ -67,3 +77,35 @@
 | Notes               |                                                                                                |
 | Tasks               | - [ ] Design the Pause Menu UI                                                                 |
 |                     | - [ ] Implement the Pause Menu functionality.                                                  |
+
+---
+
+| ID--GAME-7          | As a Player, I want the ability to break and place voxels to interact with the game environment. |
+| ------------------- | -----------------------------------------------------------------------------------------------|
+| Description         | - **User:** Player                                                                              |
+|                     | - **Functionality:** Voxel Breaking and Placing                                                 |
+|                     | - **Goal:** Interact with the game world by modifying voxel structures.                          |
+| Acceptance Criteria | 1. Implement voxel breaking mechanics                                                           |
+|                     | 2. Implement voxel placing mechanics                                                            |
+|                     | 3. Ensure smooth transition between breaking and placing.                                       |
+| Notes               |                                                                                                |
+| Tasks               | - [ ] Develop voxel breaking functionality.                                                    |
+|                     | - [ ] Develop voxel placing functionality.                                                      |
+|                     | - [ ] Test the transition between breaking and placing.                                         |
+
+---
+
+| ID--GAME-8          | As a Player, I want to see a black outline on the voxel I'm looking at for better interaction clarity. |
+| ------------------- | -----------------------------------------------------------------------------------------------------|
+| Description         | - **User:** Player                                                                                   |
+|                     | - **Functionality:** Voxel Highlight on Look                                                         |
+|                     | - **Goal:** Enhance player's clarity when interacting with individual voxels.                         |
+| Acceptance Criteria | 1. Implement a shader or functionality that highlights a voxel with a black frame.                    |
+|                     | 2. Ensure the highlight is only active on the looked-at voxel.                                       |
+|                     | 3. The highlight should not cause performance drops or visual issues.                                |
+| Notes               | Consider shader optimizations for smoother performance.                                              |
+| Tasks               | - [ ] Design the shader or functionality for voxel highlighting.                                     |
+|                     | - [ ] Integrate the highlight functionality with player's line of sight.                             |
+|                     | - [ ] Optimize and test for performance and visual clarity.                                          |
+
+---

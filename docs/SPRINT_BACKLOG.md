@@ -1,7 +1,5 @@
 | Title  | Date       | Goals/Functionality                                                        |
 | ------ | ---------- | -------------------------------------------------------------------------- |
-| Week 1 | 19/10/2023 | Start on Sprint Backlog, User Stories and design document. Do user stories for 0.1.0. |
-| Week 2 | 26/10/2023 | Work on Modding API and registering nodes in the game, Player UI, Placing and Breaking Nodes, User stories for 0.2.0          |
-| Week 3 | 02/11/2023 | User stories for 0.3.0                          |
-| Week 4 | 09/11/2023 | User stories for 0.4.0                                           |
-| Week 5 | 16/11/2023 | User stories for 0.5.0                                                  |
+| Timebox 1 | 19/10/2023 | Start on Sprint Backlog, User Stories and design document. Do user stories for 0.1.0. |
+| Timebox 2 | 02/11/2023 | Work on Modding API and registering nodes in the game, Player UI, Placing and Breaking Nodes, User stories for 0.2.0          |
+| Timebox 3 | 16/11/2023 | User stories for 0.2.0 |
