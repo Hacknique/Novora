@@ -36,8 +36,6 @@ Voxey's architecture is designed for modding. Refer to our [Modding Guide](./doc
 Contributions are what make the open-source community such an inspiring place to learn, inspire, and create. We welcome any and all contributions! Refer to our [Contribution Guide](./docs/CONTRIBUTING.md) for more information.
 
 ## License
-
-## License
 Each part of this project is licensed under specific terms. In cases where a file doesn't have a license notice or is not otherwise specified, it falls under the Fallback License. Below are the licensing details:
 
 + **Code**: The code is licensed under the terms provided in the [Code License file](LICENSE).
