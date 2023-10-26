@@ -4,7 +4,7 @@
 
 Voxey is a freedom-respecting voxel game built with the power and flexibility of the Godot engine. Dive in, craft your world, and unleash its infinite modding potential!
 
-![Logo](./assets/logo.png)
+![Logo](./assets/logo-256x256.png)
 
 ## Features
 
