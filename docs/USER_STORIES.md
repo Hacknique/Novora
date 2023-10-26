@@ -42,7 +42,7 @@
 
 ---
 
-| ID--GAME-4          | As a Player, I want an interactive flat world generated consisting of nodes.                   |
+| ID--GAME-4          | As a Player, I want an interactive flat world generated consisting of voxels.                   |
 | ------------------- | ---------------------------------------------------------------------------------------------- |
 | Description         | - **User:** Player                                                                             |
 |                     | - **Functionality:** World Generation                                                          |
@@ -61,6 +61,7 @@
 |                     | - **Goal:** WASD controls for movement, mouse movement for rotation and yaw.                    |
 | Acceptance Criteria | 1. Implement WASD controls                                                                     |
 |                     | 2. Implement mouse controls for rotation and yaw                                               |
+|                     | 3. Implement jump controls with `Space` key.                                                   |
 | Notes               |                                                                                                |
 | Tasks               | - [ ] Code player movement controls                                                            |
 |                     | - [ ] Implement mouse controls for player orientation.                                         |
