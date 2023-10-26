@@ -1,7 +1,7 @@
 ---
 name: Game Feature Request (Inline User Story Format)
 about: Suggest a new game feature or enhancement using an inline user story format.
-title: '[Feature ID]: [Brief Description]'
+title: "[Feature ID]: [Brief Description]"
 labels: enhancement
 assignees: ''
 
@@ -30,4 +30,3 @@ As a [Role e.g. Player], I wish to [Desired Feature e.g. see a dynamic weather s
 - [ ] [Task 3 e.g. Test the weather system for bugs and inconsistencies]
 
 **Notes:** [Any additional details or context regarding the feature e.g. While implementing, ensure that weather effects do not hinder gameplay or cause performance issues.]
-
