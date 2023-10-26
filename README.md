@@ -45,10 +45,11 @@ Each part of this project is licensed under specific terms. In cases where a fil
 
 ## Community
 
-Join Our Matrix Space or Discord Server.
+Join Our Matrix Space, Discord Server or Facebook Group.
 
 - **[Matrix](https://matrix.to/#/#voxey:james-clarke.ynh.fr)**
 - **[Discord](https://discord.gg/Znwk5cARQm)**
+- **[Facebook Messenger](https://m.me/ch/AbYLuYLZzZktEhao/)**
 
 ## Acknowledgements
 
