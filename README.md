@@ -1,9 +1,10 @@
 # Voxey 🌍
 
-
 ![Weblate](https://hosted.weblate.org/widget/voxy/voxey/svg-badge.svg)
 
 Voxey is a freedom-respecting voxel game built with the power and flexibility of the Godot engine. Dive in, craft your world, and unleash its infinite modding potential!
+
+![Logo](./assets/logo.png)
 
 ## Features
 
@@ -12,6 +13,17 @@ Voxey is a freedom-respecting voxel game built with the power and flexibility of
 - **Extensive Modding**: Utilize the robustness of the Godot engine to create mods that revolutionize gameplay.
 - **Dynamic Environments**: From lush forests to barren deserts, experience diverse biomes and ecosystems.
 - **Community Driven**: Join a community passionate about creating, sharing, and collaborating.
+
+## Screenshots
+
+### Main Menu
+![Main Menu](./screenshots/main_menu.png)
+
+### Create World Menu
+![Create World Menu](./screenshots/create_world.png)
+
+### Pause Menu
+![Pause Menu](./screenshots/pause_menu.png)
 
 ## Getting Started
 
