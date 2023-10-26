@@ -45,6 +45,13 @@ Each part of this project is licensed under specific terms. In cases where a fil
 + **Documentation**: The documentation is under the license mentioned in the [Documentation License file](docs/LICENSE).
 + **Fallback License**: For files without a license notice or otherwise specified license, refer to the [Fallback License file](./LICENSE).
 
+## Community
+
+Join Our Matrix Space or Discord Server.
+
+- **[Matrix](https://matrix.to/#/#voxey:james-clarke.ynh.fr)**
+- **[Discord](https://discord.gg/Znwk5cARQm)**
+
 ## Acknowledgements
 
 - [Godot Engine](https://godotengine.org/)
