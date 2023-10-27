@@ -12,7 +12,7 @@
 
 **\< James David Clarke \>**
 
-**Supervisor: \<your supervisor's name\>**
+**Supervisor: <Tina Eager>**
 
 **\<jc1222@canterbury.ac.uk>**
 
@@ -133,14 +133,14 @@ not.
 
 ## What happens if someone finds a vulnerability
 
-- Am i open to lawsuits, from people misusing my mod to execute malware on the
-  server?
+- Am i open to lawsuits, from people misusing my game to execute malware on the
+  client?
 
 - If i implement mitigation's, good faith doctrine applies.
 
 - License of software does not have Any Warranty.
 
-- Serving mods from the server to the client, needs to be done safely.
+- Serving mods from the Master Peer to the Regular Peers, needs to be done safely. (Only applicable in version 2.0.0)
 
 - Be careful not to use trademarked words.
 
@@ -270,66 +270,174 @@ Not Applicable
 
 # **Appendix J: Project Management**
 
-Appendix J of your submission must contain nothing other than details regarding
-project management.
+## Sprint Backlog
+| Title  | Date       | Goals/Functionality                                                        |
+| ------ | ---------- | -------------------------------------------------------------------------- |
+| Timebox 1 | 19/10/2023 | Start on Sprint Backlog, User Stories and design document. Do user stories for 0.1.0. |
+| Timebox 2 | 02/11/2023 | Work on Modding API and registering nodes in the game, Player UI, Placing and Breaking Nodes, User stories for 0.2.0          |
+| Timebox 3 | 16/11/2023 | User stories for 0.2.0 |
 
-This Appendix should include the project plan documented in the form of, say, a
-Gantt chart (or possibly using CPM/PERT) clearly identifying the milestones for
-reviews and product delivery which should, of course, clearly link back to the
-methodology/software development life cycle employed.
+## Timebox 1
+Initially started working on the menu system. Then Gradually worked on the 3D World and Player mechanics. See user stories 1-8 for features completed in Timebox 1.
 
-The appendix must also include details of on-going actual progress to date
-against the project plan along with how any divergence from the project plan was
-caused and subsequently dealt with.
+# **Appendix K: Meetings with Supervisor** 
 
-Appendix J is for project management plans/actual progress only. No marks will
-be awarded for project management plans/actual progress other than for material
-contained in Appendix J. Discussion of project management plans/actual progress
-should be contained in the main chapters not here.
+## Session 1: Mon, 16 Oct 2023
+At 2.30pm i met with Tina Online, We discussed the minetest mod, modular_computers as i migrated from doing the webstructify project, As its a project that has already been done well, before. 
 
-# **Appendix K: Meetings with Supervisor**
+I showed them progress on the Mod. Namely the UI of the computer.
+And we discussed the ethics form which i need to submit.
 
-Appendix K of your submission must contain nothing other than details (e.g.
-date, time, location, purpose, description, actions, etc.) regarding all
-meetings with your supervisor.
+modular_computers was a mod for the game Minetest, a Voxel, Minecraft like game. This mod adds programable computers to the game.
+
+## Session 2: Fri, 27 Oct, 2023
+
+At 9.05am i met with Tina Online, We discussed my recent migration to a new project, Voxey.
+Because the old project was not feasible due to the API of Minetest for this mod was too limited.
+
+So i chose making a new game called Voxey, which implements functionality similar to Minetest. But with a more extensive API which lets you do more in the game, and its purpose is to educate and entertain players.
+
+We discussed the Marking Scheme, she gave me the Plain mark scheme, not the Agile one which applies to my project, as a sort of base to learn from. The Agile variant of the Mark Scheme will be sent to me at a later date.
+
+We mostly discussed development of the project over time, such is detailed in Appendix L.
 
 # **Appendix L: Agile Development: Timebox 1**
 
-If you are not using an Agile development method, then Appendix L of your
-submission will simply contain the text \"Not Applicable.\"
-
-Appendix L of your submission must contain nothing other than details regarding
-Time- box 1:
-
-**--** Overview of scope, purpose and benefit to customer/user. Narrative on
+## Overview of scope, purpose and benefit to customer/user. Narrative on
 problem situation (current situation) to be resolved and functionality to be
 provided (MoSCoW) and how this enhances the situation.
 
-**--** General Introduction to the Timebox Outlining:
+## General Introduction to the Timebox Outlining:
 
 1\. Prioritized Targets for the timebox.
 
-2\. Description of the choice of Software Engineering artefacts to be produced
-in this stage, e.g., Use Cases, Personas, User Descriptions, CRC cards, ER
-Diagrams, Class Diagrams, UI Content Diagrams, DFDs, UI designs, State
-Transition Net- works, Data Dictionaries, DB table designs, Object Diagrams,
-etc.
+## User Stories for v0.1.0
 
-# **--** Summary of Timebox Activity:
+| ID--GAME-1          | As a Player, I want a Main Menu where I can Create, Delete and Play Worlds.                    |
+| ------------------- | ---------------------------------------------------------------------------------------------- |
+| Description         | - **User:** Player                                                                             |
+|                     | - **Functionality:** Main Menu                                                                 |
+|                     | - **Goal:** Create, Delete, Play Worlds.                                                       |
+| Acceptance Criteria | 1. Design and Implement Main Menu UI                                                           |
+|                     | 2. Buttons for creating, deleting, and playing worlds.                                         |
+| Notes               |                                                                                                |
+| Tasks               | - [ ] Design Main Menu UI                                                                      |
+|                     | - [ ] Implement world management functions.                                                    |
+
+---
+
+| ID--GAME-2          | As a Player, I want a Create World Menu to specify world details like Name, Seed, and Type.    |
+| ------------------- | ---------------------------------------------------------------------------------------------- |
+| Description         | - **User:** Player                                                                             |
+|                     | - **Functionality:** World Creation                                                            |
+|                     | - **Goal:** Specify World Name, Seed, Worldgen Type.                                           |
+| Acceptance Criteria | 1. Design World Creation UI                                                                    |
+|                     | 2. Include input for name, seed, and dropdown for Worldgen type.                               |
+|                     | 3. Disable "Create" button for invalid names.                                                  |
+| Notes               |                                                                                                |
+| Tasks               | - [ ] Design World Creation UI                                                                 |
+|                     | - [ ] Implement input validation and UI functionality.                                         |
+
+---
+
+| ID--GAME-3          | As a Player, I want the ability to save and load worlds for persistent gameplay.               |
+| ------------------- | ---------------------------------------------------------------------------------------------- |
+| Description         | - **User:** Player                                                                             |
+|                     | - **Functionality:** Game Persistence                                                          |
+|                     | - **Goal:** Save and Load Worlds.                                                              |
+| Acceptance Criteria | 1. Implement save functionality for worlds                                                     |
+|                     | 2. Implement load functionality for worlds                                                     |
+| Notes               |                                                                                                |
+| Tasks               | - [ ] Develop a saving mechanism                                                               |
+|                     | - [ ] Implement a loading mechanism.                                                           |
+
+---
+
+| ID--GAME-4          | As a Player, I want an interactive flat world generated consisting of voxels.                   |
+| ------------------- | ---------------------------------------------------------------------------------------------- |
+| Description         | - **User:** Player                                                                             |
+|                     | - **Functionality:** World Generation                                                          |
+|                     | - **Goal:** Generate Flat World.                                                               |
+| Acceptance Criteria | 1. Implement flat world generation mechanism                                                  |
+| Notes               |                                                                                                |
+| Tasks               | - [ ] Develop the world generation algorithm                                                   |
+|                     | - [ ] Test flat world generation.                                                              |
+
+---
+
+| ID--GAME-5          | As a Player, I want basic controls for movement and orientation in the game world.             |
+| ------------------- | ---------------------------------------------------------------------------------------------- |
+| Description         | - **User:** Player                                                                             |
+|                     | - **Functionality:** Player Movement                                                           |
+|                     | - **Goal:** WASD controls for movement, mouse movement for rotation and yaw.                    |
+| Acceptance Criteria | 1. Implement WASD controls                                                                     |
+|                     | 2. Implement mouse controls for rotation and yaw                                               |
+|                     | 3. Implement jump controls with `Space` key.                                                   |
+| Notes               |                                                                                                |
+| Tasks               | - [ ] Code player movement controls                                                            |
+|                     | - [ ] Implement mouse controls for player orientation.                                         |
+
+---
+
+| ID--GAME-6          | As a Player, I want a Pause Menu to access in-game options when pressing the Escape key.       |
+| ------------------- | ---------------------------------------------------------------------------------------------- |
+| Description         | - **User:** Player                                                                             |
+|                     | - **Functionality:** Pause Menu                                                                |
+|                     | - **Goal:** Access Continue, Exit to Menu, Exit to OS.                                         |
+| Acceptance Criteria | 1. Design Pause Menu UI                                                                        |
+|                     | 2. Implement the options: Continue, Exit to Menu, Exit to OS                                   |
+| Notes               |                                                                                                |
+| Tasks               | - [ ] Design the Pause Menu UI                                                                 |
+|                     | - [ ] Implement the Pause Menu functionality.                                                  |
+
+---
+
+| ID--GAME-7          | As a Player, I want the ability to break and place voxels to interact with the game environment. |
+| ------------------- | -----------------------------------------------------------------------------------------------|
+| Description         | - **User:** Player                                                                              |
+|                     | - **Functionality:** Voxel Breaking and Placing                                                 |
+|                     | - **Goal:** Interact with the game world by modifying voxel structures.                          |
+| Acceptance Criteria | 1. Implement voxel breaking mechanics                                                           |
+|                     | 2. Implement voxel placing mechanics                                                            |
+|                     | 3. Ensure smooth transition between breaking and placing.                                       |
+| Notes               |                                                                                                |
+| Tasks               | - [ ] Develop voxel breaking functionality.                                                    |
+|                     | - [ ] Develop voxel placing functionality.                                                      |
+|                     | - [ ] Test the transition between breaking and placing.                                         |
+
+---
+
+| ID--GAME-8          | As a Player, I want to see a black outline on the voxel I'm looking at for better interaction clarity. |
+| ------------------- | -----------------------------------------------------------------------------------------------------|
+| Description         | - **User:** Player                                                                                   |
+|                     | - **Functionality:** Voxel Highlight on Look                                                         |
+|                     | - **Goal:** Enhance player's clarity when interacting with individual voxels.                         |
+| Acceptance Criteria | 1. Implement a shader or functionality that highlights a voxel with a black frame.                    |
+|                     | 2. Ensure the highlight is only active on the looked-at voxel.                                       |
+|                     | 3. The highlight should not cause performance drops or visual issues.                                |
+| Notes               | Consider shader optimizations for smoother performance.                                              |
+| Tasks               | - [ ] Design the shader or functionality for voxel highlighting.                                     |
+|                     | - [ ] Integrate the highlight functionality with player's line of sight.                             |
+|                     | - [ ] Optimize and test for performance and visual clarity.                                          |
+
+---
+
+
+## Summary of Timebox Activity:
 
 1\. Summary of (changes in) this timebox to system -- Achievements and missing
 features.
 
 2\. Changes to project plan in the light of development in this timebox.
 
-# **--** Conclusions:
+## Conclusions:
 
 1. Summary of learning and achievement in this timebox.
 2. Reflection on the success of the work in this timebox -- alternative
    actions/developments/techniques and their potential to have improved the
    delivery.
 
-# **--** User Guide, if appropriate -- suggest a 'Minimal Manual
+## User Guide, if appropriate -- suggest a 'Minimal Manual
 
 format', as per Carroll (1987)
 
