@@ -32,10 +32,11 @@ If applicable, add screenshots to help explain your problem.
  - OS and Version: [e.g. iOS8.1]
  - Game Version [e.g. 0.1.0]
 
-** Web **
+**Web:**
  - Device: [e.g. iPhone6]
  - OS and Version: [e.g. iOS8.1]
  - Web Browser [e.g safari, chrome, firefox]
  - Game Version [e.g. 0.1.0]
+
 **Additional context**
 Add any other context about the problem here.
