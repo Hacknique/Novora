@@ -1,16 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://dil7reps2d4av"]
+[gd_scene load_steps=7 format=3 uid="uid://dil7reps2d4av"]
 
 [ext_resource type="Script" path="res://scripts/World/World.gd" id="1_qxp45"]
-[ext_resource type="Script" path="res://scripts/World/Player.gd" id="2_muo25"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_pak5f"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_ww7c8"]
-size = Vector3(1, 2, 1)
+[ext_resource type="PackedScene" uid="uid://dr4x44hu6syd8" path="res://scenes/Objects/Player3D.tscn" id="2_sg8dw"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_7scnl"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yquho"]
+albedo_color = Color(0.290196, 0.286275, 0.286275, 1)
+metallic = 1.0
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_44ms4"]
 size = Vector3(100, 1, 100)
@@ -23,22 +20,8 @@ ambient_light_energy = 16.0
 script = ExtResource("1_qxp45")
 metadata/world_name = ""
 
-[node name="Player" type="CharacterBody3D" parent="."]
-script = ExtResource("2_muo25")
-
-[node name="Texture" type="MeshInstance3D" parent="Player"]
-transform = Transform3D(1, 0, 0, 0, 2, 0, 0, 0, 1, 0, 1.00932, 0)
-mesh = SubResource("BoxMesh_pak5f")
-skeleton = NodePath("")
-
-[node name="CollisionBox" type="CollisionShape3D" parent="Player"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00932, 0)
-shape = SubResource("BoxShape3D_ww7c8")
-
-[node name="Camera" type="Camera3D" parent="Player"]
-unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.58064, 0)
-current = true
+[node name="Player3D" parent="." instance=ExtResource("2_sg8dw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 
 [node name="Floor" type="StaticBody3D" parent="."]
 
@@ -52,7 +35,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 shape = SubResource("BoxShape3D_44ms4")
 
 [node name="Sun" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 100, 0)
+transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 5, 0)
+light_color = Color(1, 0.835294, 0.721569, 1)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_6kixt")

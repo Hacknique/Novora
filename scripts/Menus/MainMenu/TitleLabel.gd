@@ -1,4 +1,4 @@
 extends Label
 
 func _ready():
-	self.text = ProjectSettings.get_setting("application/config/name","")
+    self.text = ProjectSettings.get_setting("application/config/name","")
