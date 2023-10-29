@@ -22,3 +22,4 @@ func _ready():
 	set_texture("res://assets/Voxel/voxel_texture_atlas.webp")
 	set_highlighted(true)
 	
+

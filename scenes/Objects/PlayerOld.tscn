@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://v4u57t4a0pwh"]
+
+[ext_resource type="Script" path="res://scripts/World/Player.gd" id="1_b1u2w"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_pak5f"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ww7c8"]
+size = Vector3(1, 2, 1)
+
+[node name="Player" type="CharacterBody3D"]
+visible = false
+script = ExtResource("1_b1u2w")
+
+[node name="Texture" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 2, 0, 0, 0, 1, 0, 1.00932, 0)
+mesh = SubResource("BoxMesh_pak5f")
+skeleton = NodePath("")
+
+[node name="CollisionBox" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00932, 0)
+shape = SubResource("BoxShape3D_ww7c8")
+
+[node name="Camera" type="Camera3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.58064, 0)
+current = true
