@@ -5,7 +5,6 @@
 [ext_resource type="Script" path="res://scripts/World/UserInterface/EscapeMenu/Options/ExitToMenuBtn.gd" id="4_smt7r"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_45lgq"]
-load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"
 
 [sub_resource type="GDScript" id="GDScript_4xgrh"]
 script/source = "extends TextureRect
@@ -20,6 +19,7 @@ script/source = "extends Button
 
 
 func _on_pressed():
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	self.get_parent().get_parent().get_parent().get_parent().queue_free()
 "
 
