@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c34v6fryvdjqr"
-path="res://.godot/imported/text2.webp-2dc435b1ac6827aa387d6a04381fe10a.ctex"
+uid="uid://fkimu65mtfl7"
+path="res://.godot/imported/crosshair.webp-e4af2edfa4e48b29c626a69e05e1602b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Voxel/text2.webp"
-dest_files=["res://.godot/imported/text2.webp-2dc435b1ac6827aa387d6a04381fe10a.ctex"]
+source_file="res://assets/UserInterface/crosshair.webp"
+dest_files=["res://.godot/imported/crosshair.webp-e4af2edfa4e48b29c626a69e05e1602b.ctex"]
 
 [params]
 
