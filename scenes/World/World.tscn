@@ -1,7 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://dil7reps2d4av"]
+[gd_scene load_steps=6 format=3 uid="uid://dil7reps2d4av"]
 
 [ext_resource type="Script" path="res://scripts/World/World.gd" id="1_qxp45"]
-[ext_resource type="PackedScene" uid="uid://d2xtupw4amxle" path="res://scenes/Objects/Player3D.tscn" id="2_sg8dw"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_7scnl"]
 
@@ -19,9 +18,6 @@ ambient_light_energy = 16.0
 [node name="World" type="Node3D"]
 script = ExtResource("1_qxp45")
 metadata/world_name = ""
-
-[node name="Player3D" parent="." instance=ExtResource("2_sg8dw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 
 [node name="Floor" type="StaticBody3D" parent="."]
 

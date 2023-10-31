@@ -1,32 +1,25 @@
 [gd_scene load_steps=4 format=3 uid="uid://d2xtupw4amxle"]
 
-[ext_resource type="Script" path="res://scripts/Objects/Player.gd" id="1_apxvj"]
+[ext_resource type="Script" path="res://scripts/Objects/Player/Player.gd" id="1_ucb44"]
 [ext_resource type="PackedScene" uid="uid://uo504lu42ebx" path="res://scenes/World/UserInterface/HUD.tscn" id="2_7j1ye"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_v5thg"]
 
-[node name="Player3D" type="Node3D"]
-script = ExtResource("1_apxvj")
-_jump_force = 6.5
-_mouse_sensitivity = 0.2
-_speed_sprint = 6.0
-_speed_walk = 4.0
-_speed_crouch = 2.0
+[node name="Player3D" type="CharacterBody3D"]
+script = ExtResource("1_ucb44")
 
-[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_v5thg")
 
-[node name="CameraPivot" type="Node3D" parent="CharacterBody3D"]
+[node name="CameraPivot" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 
-[node name="Camera3D" type="Camera3D" parent="CharacterBody3D/CameraPivot"]
+[node name="Camera3D" type="Camera3D" parent="CameraPivot"]
 fov = 90.0
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody3D/CameraPivot/Camera3D"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CameraPivot/Camera3D"]
 
-[node name="HUD" parent="CharacterBody3D/CameraPivot/Camera3D" instance=ExtResource("2_7j1ye")]
+[node name="HUD" parent="CameraPivot/Camera3D" instance=ExtResource("2_7j1ye")]
 
 [node name="State" type="Node" parent="."]
 
@@ -35,3 +28,5 @@ fov = 90.0
 [node name="Hunger" type="Node" parent="State"]
 
 [node name="Stamina" type="Node" parent="State"]
+
+[connection signal="tree_entered" from="." to="." method="_on_tree_entered"]
