@@ -4,7 +4,7 @@
 
 Novora is a freedom-respecting voxel game built with the power and flexibility of the Godot engine. Dive in, craft your world, and unleash its infinite modding potential!
 
-![Logo](./assets/logo-256x256.png)
+<img src="./assets/logo.png" width="256" height="256" />
 
 ## Features
 
