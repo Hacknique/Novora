@@ -68,6 +68,17 @@ Join Our Matrix Space, Discord Server or Facebook Group.
 - **[Discord](https://discord.gg/Znwk5cARQm)**
 - **[Facebook Messenger](https://m.me/ch/AbYLuYLZzZktEhao/)**
 
+### IRC
+[Libera Chat](https://libera.chat/) is used for our IRC channels, so feel free to connect to any of the following channels.
+
+- General `#novora-general`
+- Development: `#novora-dev`
+- Libre Friendly: `#novora-libre-friendly`
+- Gaming `#novora-gaming`
+- Naming `#novora-naming`
+
+**Note that all channels apart from Libre Friendly are bridged to discord, if you are uncomfortable with having your messages relayed to discord, i reccomend joining the Libre Friendly channel/room**
+
 ## Acknowledgements
 
 - [Godot Engine](https://godotengine.org/)
