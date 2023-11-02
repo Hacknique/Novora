@@ -1,8 +1,8 @@
-# Voxey 🌍
+# Novora 🌍
 
 ![Weblate](https://hosted.weblate.org/widget/voxy/voxey/svg-badge.svg)
 
-Voxey is a freedom-respecting voxel game built with the power and flexibility of the Godot engine. Dive in, craft your world, and unleash its infinite modding potential!
+Novora is a freedom-respecting voxel game built with the power and flexibility of the Godot engine. Dive in, craft your world, and unleash its infinite modding potential!
 
 ![Logo](./assets/logo-256x256.png)
 
@@ -44,7 +44,7 @@ git clone https://github.com/Hacknique/Voxey
 ## Modding
 
 WIP: No Modding API Yet.
-Voxey's architecture is designed for modding. Refer to our [Modding Guide](./docs/MODDING.md) for detailed instructions and tutorials on getting started with creating mods.
+Novora's architecture is designed for modding. Refer to our [Modding Guide](./docs/MODDING.md) for detailed instructions and tutorials on getting started with creating mods.
 
 ## Contribution
 
@@ -62,7 +62,7 @@ Each part of this project is licensed under specific terms. In cases where a fil
 
 Join Our Matrix Space, Discord Server or Facebook Group.
 
-- **[Matrix](https://matrix.to/#/#voxey:james-clarke.ynh.fr)**
+- **[Matrix](https://matrix.to/#/#novora:james-clarke.ynh.fr)**
 - **[Discord](https://discord.gg/Znwk5cARQm)**
 - **[Facebook Messenger](https://m.me/ch/AbYLuYLZzZktEhao/)**
 
@@ -71,4 +71,4 @@ Join Our Matrix Space, Discord Server or Facebook Group.
 - [Godot Engine](https://godotengine.org/)
 - And all our wonderful contributors and community members!
 
-Join us on our journey to make Voxey the best free voxel game out there!
+Join us on our journey to make Novora the best free voxel game out there!
