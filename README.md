@@ -35,7 +35,7 @@ Novora is a freedom-respecting voxel game built with the power and flexibility o
 
 1. Clone the repository:
 ```sh
-git clone https://github.com/Hacknique/Voxey
+git clone https://github.com/Hacknique/Novora
 ```
 
 2. Open the project in Godot.
