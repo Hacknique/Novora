@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://3s6nv4bmerim"]
 
-[ext_resource type="Texture2D" uid="uid://dhn3hmm83lcvp" path="res://assets/logo.png" id="1_o6ntj"]
+[ext_resource type="Texture2D" uid="uid://q7qp11j7ub1t" path="res://assets/logo.png" id="1_o6ntj"]
 [ext_resource type="Script" path="res://scripts/World/UserInterface/EscapeMenu/AboutLabel.gd" id="2_vhb67"]
 [ext_resource type="Script" path="res://scripts/World/UserInterface/EscapeMenu/Options/ExitToOSBtn.gd" id="4_fya7k"]
 [ext_resource type="Script" path="res://scripts/World/UserInterface/EscapeMenu/Options/ExitToMenuBtn.gd" id="4_smt7r"]
@@ -9,7 +9,7 @@
 script/source = "extends TextureRect
 
 func _ready():
-	var texture = preload(\"res://assets/logo-256x256.png\")
+	var texture = preload(\"res://assets/logo.png\")
 	self.texture = texture
 "
 
