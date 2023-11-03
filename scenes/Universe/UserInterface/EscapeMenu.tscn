@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=3 uid="uid://3s6nv4bmerim"]
 
-[ext_resource type="Texture2D" uid="uid://q7qp11j7ub1t" path="res://assets/logo.png" id="1_o6ntj"]
-[ext_resource type="Script" path="res://scripts/World/UserInterface/EscapeMenu/AboutLabel.gd" id="2_vhb67"]
-[ext_resource type="Script" path="res://scripts/World/UserInterface/EscapeMenu/Options/ExitToOSBtn.gd" id="4_fya7k"]
-[ext_resource type="Script" path="res://scripts/World/UserInterface/EscapeMenu/Options/ExitToMenuBtn.gd" id="4_smt7r"]
+[ext_resource type="Texture2D" uid="uid://q7qp11j7ub1t" path="res://assets/logo.png" id="1_6bqch"]
+[ext_resource type="Script" path="res://scripts/Universe/UserInterface/EscapeMenu/AboutLabel.gd" id="2_syjga"]
+[ext_resource type="Script" path="res://scripts/Universe/UserInterface/EscapeMenu/Options/ExitToMenuBtn.gd" id="3_gokeo"]
+[ext_resource type="Script" path="res://scripts/Universe/UserInterface/EscapeMenu/Options/ExitToOSBtn.gd" id="4_csvtr"]
 
 [sub_resource type="GDScript" id="GDScript_4xgrh"]
 script/source = "extends TextureRect
@@ -62,14 +62,14 @@ theme_override_constants/separation = 25
 
 [node name="TextureRect" type="TextureRect" parent="EscapeMenuAndBackground/EscapeMenuGrid/About"]
 layout_mode = 2
-texture = ExtResource("1_o6ntj")
+texture = ExtResource("1_6bqch")
 expand_mode = 4
 script = SubResource("GDScript_4xgrh")
 
 [node name="EscapeMenuAboutLabel" type="Label" parent="EscapeMenuAndBackground/EscapeMenuGrid/About"]
 layout_mode = 2
 text = "Game Name and Version"
-script = ExtResource("2_vhb67")
+script = ExtResource("2_syjga")
 
 [node name="Options" type="VBoxContainer" parent="EscapeMenuAndBackground/EscapeMenuGrid"]
 layout_mode = 2
@@ -84,12 +84,12 @@ script = SubResource("GDScript_nn5sa")
 [node name="ExitToMenu" type="Button" parent="EscapeMenuAndBackground/EscapeMenuGrid/Options"]
 layout_mode = 2
 text = "Exit To Menu"
-script = ExtResource("4_smt7r")
+script = ExtResource("3_gokeo")
 
 [node name="ExitToOS" type="Button" parent="EscapeMenuAndBackground/EscapeMenuGrid/Options"]
 layout_mode = 2
 text = "Exit to OS"
-script = ExtResource("4_fya7k")
+script = ExtResource("4_csvtr")
 
 [node name="Label" type="Label" parent="EscapeMenuAndBackground/EscapeMenuGrid"]
 layout_mode = 2

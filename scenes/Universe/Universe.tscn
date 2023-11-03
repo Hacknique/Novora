@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://b7227x3o4eit1"]
+
+[ext_resource type="Script" path="res://scripts/Universe/Universe.gd" id="1_abl7k"]
+
+[node name="Universe" type="Node3D"]
+script = ExtResource("1_abl7k")
+
+[connection signal="ready" from="." to="." method="_ready"]

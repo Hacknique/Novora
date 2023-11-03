@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://dil7reps2d4av"]
 
-[ext_resource type="Script" path="res://scripts/World/World.gd" id="1_qxp45"]
+[ext_resource type="Script" path="res://scripts/Universe/World.gd" id="1_w6b71"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_7scnl"]
 
@@ -16,7 +16,7 @@ ambient_light_color = Color(0.996078, 0.996078, 0.996078, 1)
 ambient_light_energy = 16.0
 
 [node name="World" type="Node3D"]
-script = ExtResource("1_qxp45")
+script = ExtResource("1_w6b71")
 metadata/world_name = ""
 
 [node name="Floor" type="StaticBody3D" parent="."]
@@ -37,4 +37,4 @@ light_color = Color(1, 0.835294, 0.721569, 1)
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_6kixt")
 
-[connection signal="ready" from="." to="." method="_on_ready"]
+[connection signal="ready" from="." to="." method="_ready"]

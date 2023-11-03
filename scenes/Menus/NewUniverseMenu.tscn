@@ -1,0 +1,110 @@
+[gd_scene load_steps=6 format=3 uid="uid://dvlxvbiq6k0xd"]
+
+[ext_resource type="Script" path="res://scripts/Menus/NewUniverseMenu/Cancel.gd" id="1_k3lwg"]
+[ext_resource type="Script" path="res://scripts/Menus/NewUniverseMenu/Create.gd" id="1_xgcw4"]
+[ext_resource type="Script" path="res://scripts/Menus/NewUniverseMenu/WorldgenType.gd" id="2_4kbqg"]
+[ext_resource type="Script" path="res://scripts/Menus/NewUniverseMenu/NameEntry.gd" id="2_vqtrq"]
+
+[sub_resource type="GDScript" id="GDScript_8yvxp"]
+script/source = "extends Node
+class_name NewUniverse
+
+var valid_options = 0
+"
+
+[node name="NewWorld" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = SubResource("GDScript_8yvxp")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -560.0
+offset_top = -298.0
+offset_right = 562.0
+offset_bottom = 308.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NewUniverseGrid" type="GridContainer" parent="PanelContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 50
+theme_override_constants/v_separation = 50
+
+[node name="MainOptions" type="VBoxContainer" parent="PanelContainer/NewUniverseGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="UniverseNameContainer" type="VBoxContainer" parent="PanelContainer/NewUniverseGrid/MainOptions"]
+layout_mode = 2
+
+[node name="UniverseNameLabel" type="Label" parent="PanelContainer/NewUniverseGrid/MainOptions/UniverseNameContainer"]
+layout_mode = 2
+text = "Universe Name"
+
+[node name="UniverseNameEntry" type="LineEdit" parent="PanelContainer/NewUniverseGrid/MainOptions/UniverseNameContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+script = ExtResource("2_vqtrq")
+
+[node name="SeedContainer" type="VBoxContainer" parent="PanelContainer/NewUniverseGrid/MainOptions"]
+layout_mode = 2
+
+[node name="SeedLabel" type="Label" parent="PanelContainer/NewUniverseGrid/MainOptions/SeedContainer"]
+layout_mode = 2
+text = "Seed"
+
+[node name="SeedEntry" type="LineEdit" parent="PanelContainer/NewUniverseGrid/MainOptions/SeedContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+placeholder_text = "Leave Empty For Random Seed"
+
+[node name="MapgenContainer" type="VBoxContainer" parent="PanelContainer/NewUniverseGrid/MainOptions"]
+layout_mode = 2
+
+[node name="MapgenLabel" type="Label" parent="PanelContainer/NewUniverseGrid/MainOptions/MapgenContainer"]
+layout_mode = 2
+text = "Mapgen"
+
+[node name="OptionButton" type="OptionButton" parent="PanelContainer/NewUniverseGrid/MainOptions/MapgenContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+item_count = 2
+popup/item_0/text = "flat"
+popup/item_0/id = 0
+popup/item_1/text = "v1"
+popup/item_1/id = 1
+script = ExtResource("2_4kbqg")
+
+[node name="Actions" type="HBoxContainer" parent="PanelContainer/NewUniverseGrid"]
+layout_mode = 2
+alignment = 1
+
+[node name="CreateNewUniverseBtn" type="Button" parent="PanelContainer/NewUniverseGrid/Actions"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+text = "Create"
+script = ExtResource("1_xgcw4")
+
+[node name="CancelNewUniverseBtn" type="Button" parent="PanelContainer/NewUniverseGrid/Actions"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Cancel"
+script = ExtResource("1_k3lwg")
+
+[connection signal="text_changed" from="PanelContainer/NewUniverseGrid/MainOptions/UniverseNameContainer/UniverseNameEntry" to="PanelContainer/NewUniverseGrid/MainOptions/UniverseNameContainer/UniverseNameEntry" method="_on_text_changed"]
+[connection signal="item_selected" from="PanelContainer/NewUniverseGrid/MainOptions/MapgenContainer/OptionButton" to="PanelContainer/NewUniverseGrid/MainOptions/MapgenContainer/OptionButton" method="_on_item_selected"]
+[connection signal="pressed" from="PanelContainer/NewUniverseGrid/Actions/CreateNewUniverseBtn" to="PanelContainer/NewUniverseGrid/Actions/CreateNewUniverseBtn" method="_on_pressed"]
+[connection signal="pressed" from="PanelContainer/NewUniverseGrid/Actions/CancelNewUniverseBtn" to="PanelContainer/NewUniverseGrid/Actions/CancelNewUniverseBtn" method="_on_pressed"]

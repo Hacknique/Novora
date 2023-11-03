@@ -22,7 +22,7 @@ var _movement_speed: float = _speed_walk
 @onready var eyes: Camera3D = self.get_node("CameraPivot/Camera3D")
 
 # Preload the escape menu scene
-var escape_menu_scene = preload("res://scenes/World/UserInterface/EscapeMenu.tscn")
+var escape_menu_scene = preload("res://scenes/Universe/UserInterface/EscapeMenu.tscn")
 var escape_menu_instance = null
 
 func toggle_escape_menu():
