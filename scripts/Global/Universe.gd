@@ -98,7 +98,6 @@ func save(world_scene) -> WorldData:
 	for key in player_data.keys():
 		universe_data.players_data[key] = player_data[key]
 		player_data[key].save()
-	universe_data.players_data[player_data.name] = player_data
 	self.universe_data = universe_data
 	return universe_data
 
