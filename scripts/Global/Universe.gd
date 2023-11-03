@@ -95,8 +95,11 @@ func delete() -> bool:
 func save(world_scene) -> WorldData:
 	var player_data = get_world_playerdata(world_scene)
 	var universe_data = UniverseData.new(self.name)
-	player_data.save()
+	for key in player_data.keys():
+		universe_data.players_data[key] = player_data[key]
+		player_data[key].save()
 	universe_data.players_data[player_data.name] = player_data
+	self.universe_data = universe_data
 	return universe_data
 
 func load(world_scene) -> WorldData:
