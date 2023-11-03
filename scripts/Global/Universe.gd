@@ -62,11 +62,11 @@ func init_dir(title):
 
 func load_or_save(world_scene):
 	if self.does_exist(self.name):
-		self.data = self.load(world_scene)
+		self.universe_data = self.load(world_scene)
 		print("Loaded World " + self.name)
 		return true
 	else:
-		self.data = self.save(world_scene)
+		self.universe_data = self.save(world_scene)
 		print("Saved World " + self.name)
 		return false
 
@@ -92,7 +92,7 @@ func delete() -> bool:
 		print("Could not open 'worlds' directory")
 		return false
 
-func save(world_scene) -> WorldData:
+func save(world_scene) -> UniverseData:
 	var player_data = get_world_playerdata(world_scene)
 	var universe_data = UniverseData.new(self.name)
 	for key in player_data.keys():
@@ -101,6 +101,6 @@ func save(world_scene) -> WorldData:
 	self.universe_data = universe_data
 	return universe_data
 
-func load(world_scene) -> WorldData:
+func load(world_scene) -> UniverseData:
 	var path = universe_path(self.name)
-	return ResourceLoader.load(path)
+	return ResourceLoader.load(path).universe_data
