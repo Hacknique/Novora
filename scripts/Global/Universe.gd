@@ -2,11 +2,9 @@ class_name Universe  # Makes the class globally accessible by name
 extends Node
 
 const BASE_PATH = "user://"
-const WORLDS_PATH = BASE_PATH + "universes/"
+const UNIVERSES_PATH = BASE_PATH + "universes/"
 
-var title: String
-var world_data: UniverseData
-var player_data: PlayerData
+@export var universe_data: UniverseData
 
 func get_nodes_of_class(node):
 	var result = []
@@ -23,7 +21,7 @@ func get_nodes_of_class(node):
 
 	
 func player_to_playerdata(player):
-	var player_data = PlayerData.new(self.title, player.username) 
+	var player_data = PlayerData.new(self.name, player.name) 
 	player_data.position = player.position
 	print("Updated Player Position on PlayerData")
 	return player_data
@@ -41,17 +39,17 @@ func get_world_playerdata(world_scene):
 
 # Constructor
 func _init(title: String):
-	self.title = title
+	self.name = title
 	init_dir(title)
 			
 func init_dir(title):
 	var dir = DirAccess.open(self.BASE_PATH)
-	if dir.dir_exists(self.WORLDS_PATH):
-		print("Cant make worlds directory as it already exists")
+	if dir.dir_exists(self.UNIVERSES_PATH):
+		print("Cant make universes directory as it already exists")
 	else:
-		var make_dir = dir.make_dir("worlds")
+		var make_dir = dir.make_dir("universes")
 		if make_dir == OK:
-			dir = DirAccess.open(self.BASE_PATH + "/worlds")
+			dir = DirAccess.open(self.BASE_PATH + "/universes")
 			var make_world_dir = dir.make_dir(title)
 			if make_world_dir == OK:
 				print("Made directory for world '"+title+"'")
@@ -63,26 +61,26 @@ func init_dir(title):
 	
 
 func load_or_save(world_scene):
-	if self.does_exist(self.title):
+	if self.does_exist(self.name):
 		self.data = self.load(world_scene)
-		print("Loaded World " + self.title)
+		print("Loaded World " + self.name)
 		return true
 	else:
 		self.data = self.save(world_scene)
-		print("Saved World " + self.title)
+		print("Saved World " + self.name)
 		return false
 
 
 static func universe_path(title) -> String:
-	return WORLDS_PATH + "/" + title
+	return UNIVERSES_PATH + "/" + title
 
 static func does_exist(title) -> bool:
 	var path = universe_path(title)
 	return DirAccess.dir_exists_absolute(path)
 
 func delete() -> bool:
-	var dir = DirAccess.open(WORLDS_PATH)
-	var world_path = WORLDS_PATH + "/" + self.title
+	var dir = DirAccess.open(UNIVERSES_PATH)
+	var world_path = UNIVERSES_PATH + "/" + self.name
 	if dir:
 		var error = dir.remove(world_path)
 		if error == OK:
@@ -96,19 +94,11 @@ func delete() -> bool:
 
 func save(world_scene) -> WorldData:
 	var player_data = get_world_playerdata(world_scene)
-	var world_data = WorldData.new()
-	world_data.world_name = self.title
-	world_data.player_data = player_data
-	var path = universe_path(self.title)
-	
-	var error = ResourceSaver.save(world_data, path)
-	# Check for errors
-	if error == OK:
-		print("Saved successfully!")
-	else:
-		print("Failed to save with error code: ", error)
-	return world_data
+	var universe_data = UniverseData.new(self.name)
+	player_data.save()
+	universe_data.players_data[player_data.name] = player_data
+	return universe_data
 
 func load(world_scene) -> WorldData:
-	var path = universe_path(self.title)
+	var path = universe_path(self.name)
 	return ResourceLoader.load(path)

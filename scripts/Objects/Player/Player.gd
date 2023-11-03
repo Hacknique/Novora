@@ -12,7 +12,9 @@ signal ready_signal
 @export var _speed_sprint: float = 7.0
 @export var _speed_walk: float = 5.0
 @export var _speed_crouch: float = 3.5
-@export var username = "singleplayer"
+
+func _init(name="singleplayer"):
+	self.name = name
 
 # Private variables
 var _movement_speed: float = _speed_walk

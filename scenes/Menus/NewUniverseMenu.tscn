@@ -12,7 +12,7 @@ class_name NewUniverse
 var valid_options = 0
 "
 
-[node name="NewWorld" type="Control"]
+[node name="NewUniverse" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

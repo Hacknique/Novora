@@ -14,7 +14,7 @@ func _init(universe_name, name):
 	
 func init_dir():
 	var dir = DirAccess.open(Universe.BASE_PATH)
-	if dir.dir_exists(Universe.WORLDS_PATH + "/" + self.universe_name):
+	if dir.dir_exists(Universe.UNIVERSES_PATH + "/" + self.universe_name):
 		print("Cant make worlds directory as it already exists")
 	else:
 		var make_dir = dir.make_dir("players")

@@ -4,7 +4,7 @@ const base_path = "user://"
 const worlds_path = base_path + "worlds/"
 
 func _on_pressed():
-	%DeleteWorldDialog.popup_centered()
+	%DeleteUniverseDialog.popup_centered()
 
 func _on_delete_world_dialog_confirmed():
 	
