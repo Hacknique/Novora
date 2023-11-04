@@ -24,6 +24,9 @@ var _movement_speed: float = _speed_walk
 var escape_menu_scene = preload("res://scenes/Universe/UserInterface/EscapeMenu.tscn")
 var escape_menu_instance = null
 
+func _init(name="singleplayer"):
+	self.name = name
+
 func toggle_escape_menu():
 	if !escape_menu_instance:
 		# Instance and add the escape menu to the scene

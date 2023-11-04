@@ -3,9 +3,15 @@ extends Node
 
 const BASE_PATH = "user://"
 const UNIVERSES_PATH = BASE_PATH + "universes/"
-
 @export var universe_data: UniverseData
 
+
+static func worlds_dir(title):
+	return UNIVERSES_PATH + title + "/worlds/"
+
+static func players_dir(title):
+	return UNIVERSES_PATH + title + "/players/"
+	
 func get_nodes_of_class(node):
 	var result = []
 
@@ -41,23 +47,63 @@ func get_world_playerdata(world_scene):
 func _init(title: String):
 	self.name = title
 	init_dir(title)
-			
-func init_dir(title):
+
+func init_universes_dir():
 	var dir = DirAccess.open(self.BASE_PATH)
 	if dir.dir_exists(self.UNIVERSES_PATH):
 		print("Cant make universes directory as it already exists")
+		return OK
 	else:
-		var make_dir = dir.make_dir("universes")
-		if make_dir == OK:
-			dir = DirAccess.open(self.BASE_PATH + "/universes")
-			var make_world_dir = dir.make_dir(title)
-			if make_world_dir == OK:
-				print("Made directory for world '"+title+"'")
+		var make_universes_dir = dir.make_dir("universes")
+		return make_universes_dir
+
+func init_universe_dir(title):
+	var dir = DirAccess.open(UNIVERSES_PATH)
+	if dir.dir_exists(self.universe_path(title)):
+		return OK
+	else:
+		var mk_universe_dir = dir.make_dir(title)
+		return mk_universe_dir
+
+func init_worlds_dir(title):
+	var dir = DirAccess.open(self.universe_path(title))
+	print("0101")
+	print(dir)
+	if dir.dir_exists(self.worlds_dir(title)):
+		return OK
+	else:
+		var mk_worlds_dir = dir.make_dir(self.worlds_dir(title))
+		return mk_worlds_dir
+
+func init_players_dir(title):
+	var dir = DirAccess.open(self.universe_path(title))
+	if dir.dir_exists(self.players_dir(title)):
+		return OK
+	else:
+		var mk_players_dir = dir.make_dir(self.players_dir(title))
+		return mk_players_dir
+		
+func init_dir(title):
+	var mk_universes_dir = init_universes_dir()
+	if mk_universes_dir == OK:
+		print("Made Universes directory sucessfully")
+		var mk_universe_dir = init_universe_dir(title)
+		if mk_universe_dir == OK:
+			print("Made Universe: '"+title+"' directory sucessfully")
+			var mk_worlds_dir = init_worlds_dir(title)
+			if mk_worlds_dir == OK:
+				print("Made 'worlds' directory for universe '"+title+"'")
 			else:
-				print("Could not make directory for world '"+title+"'")
-			print("Made Worlds directory")
+				print("Could not make 'worlds' directory for universe '"+title+"'")
+			var mk_players_dir = init_players_dir(title)
+			if mk_players_dir == OK:
+				print("Made 'players' directory for universe '"+title+"'")
+			else:
+				print("Could not make 'players' directory for universe '"+title+"'")
 		else:
-			print("Could not make Worlds directory")
+			print("Could not make directory for universe '"+title+"'")
+	else:
+		print("Could not make universes directory")
 	
 
 func load_or_save(world_scene):
@@ -72,7 +118,7 @@ func load_or_save(world_scene):
 
 
 static func universe_path(title) -> String:
-	return UNIVERSES_PATH + "/" + title
+	return UNIVERSES_PATH + title
 
 static func does_exist(title) -> bool:
 	var path = universe_path(title)
