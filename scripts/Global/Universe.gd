@@ -147,6 +147,6 @@ func save(world_scene) -> UniverseData:
 	self.universe_data = universe_data
 	return universe_data
 
-func load(world_scene) -> UniverseData:
+func load(world_scene):
 	var path = universe_path(self.name)
-	return ResourceLoader.load(path).universe_data
+	return ResourceLoader.load(path)
