@@ -1,9 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://vnvvk2h417qr"]
+[gd_scene load_steps=6 format=3 uid="uid://vnvvk2h417qr"]
 
 [ext_resource type="Script" path="res://scripts/Menus/MainMenu/UniverseList.gd" id="2_ldagl"]
 [ext_resource type="Script" path="res://scripts/Menus/MainMenu/DeleteUniverse.gd" id="3_xoxpg"]
 [ext_resource type="Script" path="res://scripts/Menus/MainMenu/NewUniverse.gd" id="4_7keuo"]
 [ext_resource type="Script" path="res://scripts/Menus/MainMenu/PlayUniverse.gd" id="5_ghgce"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ws8hb"]
+font_size = 42
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -12,17 +15,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="Title" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -20.0
-offset_right = 20.0
-offset_bottom = 23.0
-grow_horizontal = 2
-theme_override_font_sizes/font_size = 50
 
 [node name="TabContainer" type="TabContainer" parent="."]
 layout_mode = 1
@@ -129,6 +121,18 @@ layout_mode = 2
 unique_name_in_owner = true
 size = Vector2i(351, 100)
 dialog_text = "Are you sure you want to delete this universe?"
+
+[node name="Title" type="Title" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+label_settings = SubResource("LabelSettings_ws8hb")
+horizontal_alignment = 1
 
 [connection signal="empty_clicked" from="TabContainer/Start Game/Game Menu/UniverseListAndOptions/UniverseMenu/UniverseListContainer/UniverseList" to="TabContainer/Start Game/Game Menu/UniverseListAndOptions/UniverseMenu/UniverseListContainer/UniverseList" method="_on_empty_clicked"]
 [connection signal="item_selected" from="TabContainer/Start Game/Game Menu/UniverseListAndOptions/UniverseMenu/UniverseListContainer/UniverseList" to="TabContainer/Start Game/Game Menu/UniverseListAndOptions/UniverseMenu/UniverseListContainer/UniverseList" method="_on_item_selected"]

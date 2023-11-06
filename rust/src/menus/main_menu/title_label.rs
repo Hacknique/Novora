@@ -1,4 +1,4 @@
-use godot::engine::{Label, LabelVirtual};
+use godot::engine::{Label, LabelVirtual, ProjectSettings};
 use godot::prelude::*;
 
 #[derive(GodotClass)]
@@ -11,11 +11,13 @@ struct Title {
 #[godot_api]
 impl LabelVirtual for Title {
     fn init(label: Base<Label>) -> Self {
-        godot_print!("Title ready");
         Self { label }
     }
     fn ready(&mut self) {
-        godot_print!("Title ready");
-        self.label.set_text("Novora".into());
+        let title = ProjectSettings::singleton()
+            .get_setting("application/config/name".into())
+            .to_string()
+            .to_godot();
+        self.label.set_text(title);
     }
 }
