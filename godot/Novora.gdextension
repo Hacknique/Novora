@@ -1,0 +1,13 @@
+[configuration]
+entry_symbol = "gdext_rust_init"
+compatibility_minimum = 4.1
+
+[libraries]
+linux.debug.x86_64 = "res://../target/debug/libnovora.so"
+linux.release.x86_64 = "res://../target/release/libnovora.so"
+windows.debug.x86_64 = "res://../target/debug/novora.dll"
+windows.release.x86_64 = "res://../target/release/novora.dll"
+macos.debug = "res://../target/debug/libnovora.dylib"
+macos.release = "res://../target/release/libnovora.dylib"
+macos.debug.arm64 = "res://../target/debug/libnovora.dylib"
+macos.release.arm64 = "res://../target/release/libnovora.dylib"

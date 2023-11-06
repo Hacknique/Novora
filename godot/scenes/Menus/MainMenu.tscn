@@ -1,6 +1,5 @@
-[gd_scene load_steps=6 format=3 uid="uid://vnvvk2h417qr"]
+[gd_scene load_steps=5 format=3 uid="uid://vnvvk2h417qr"]
 
-[ext_resource type="Script" path="res://scripts/Menus/MainMenu/TitleLabel.gd" id="1_aynnw"]
 [ext_resource type="Script" path="res://scripts/Menus/MainMenu/UniverseList.gd" id="2_ldagl"]
 [ext_resource type="Script" path="res://scripts/Menus/MainMenu/DeleteUniverse.gd" id="3_xoxpg"]
 [ext_resource type="Script" path="res://scripts/Menus/MainMenu/NewUniverse.gd" id="4_7keuo"]
@@ -24,7 +23,6 @@ offset_right = 20.0
 offset_bottom = 23.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 50
-script = ExtResource("1_aynnw")
 
 [node name="TabContainer" type="TabContainer" parent="."]
 layout_mode = 1
@@ -132,7 +130,6 @@ unique_name_in_owner = true
 size = Vector2i(351, 100)
 dialog_text = "Are you sure you want to delete this universe?"
 
-[connection signal="ready" from="." to="." method="_on_ready"]
 [connection signal="empty_clicked" from="TabContainer/Start Game/Game Menu/UniverseListAndOptions/UniverseMenu/UniverseListContainer/UniverseList" to="TabContainer/Start Game/Game Menu/UniverseListAndOptions/UniverseMenu/UniverseListContainer/UniverseList" method="_on_empty_clicked"]
 [connection signal="item_selected" from="TabContainer/Start Game/Game Menu/UniverseListAndOptions/UniverseMenu/UniverseListContainer/UniverseList" to="TabContainer/Start Game/Game Menu/UniverseListAndOptions/UniverseMenu/UniverseListContainer/UniverseList" method="_on_item_selected"]
 [connection signal="pressed" from="TabContainer/Start Game/Game Menu/UniverseListAndOptions/UniverseOptions/HBoxContainer/DeleteUniverseBtn" to="TabContainer/Start Game/Game Menu/UniverseListAndOptions/UniverseOptions/HBoxContainer/DeleteUniverseBtn" method="_on_pressed"]
