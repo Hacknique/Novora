@@ -1,5 +1,5 @@
-use godot::engine::{Label, LabelVirtual, ProjectSettings};
 use godot::prelude::*;
+use godot::engine::{Label, ILabel, ProjectSettings};
 
 #[derive(GodotClass)]
 #[class(base=Label)]
@@ -9,7 +9,7 @@ struct Title {
 }
 
 #[godot_api]
-impl LabelVirtual for Title {
+impl ILabel for Title {
     fn init(label: Base<Label>) -> Self {
         Self { label }
     }
